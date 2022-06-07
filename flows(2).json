@@ -1,0 +1,248 @@
+[
+    {
+        "id": "4fcb0f881cdb39b2",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "939324581ce1041c",
+        "type": "inject",
+        "z": "4fcb0f881cdb39b2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Texto de prueba para el grupo 7.",
+        "payloadType": "str",
+        "x": 110,
+        "y": 80,
+        "wires": [
+            [
+                "8631bc7d69313ae4"
+            ]
+        ]
+    },
+    {
+        "id": "7cbfd2e051fb1eae",
+        "type": "inject",
+        "z": "4fcb0f881cdb39b2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 110,
+        "y": 140,
+        "wires": [
+            [
+                "469b07a3b653c629",
+                "6ee6f34ada5cee11"
+            ]
+        ]
+    },
+    {
+        "id": "3b3ce0707e4e712f",
+        "type": "inject",
+        "z": "4fcb0f881cdb39b2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "5",
+        "payloadType": "num",
+        "x": 110,
+        "y": 220,
+        "wires": [
+            [
+                "469b07a3b653c629",
+                "6ee6f34ada5cee11"
+            ]
+        ]
+    },
+    {
+        "id": "5934a8764aa89de4",
+        "type": "inject",
+        "z": "4fcb0f881cdb39b2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 110,
+        "y": 300,
+        "wires": [
+            [
+                "469b07a3b653c629",
+                "6ee6f34ada5cee11"
+            ]
+        ]
+    },
+    {
+        "id": "8631bc7d69313ae4",
+        "type": "ui_text",
+        "z": "4fcb0f881cdb39b2",
+        "group": "843732d3b4b85f8b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Texto de Pureba - Label",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 450,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "6ee6f34ada5cee11",
+        "type": "ui_gauge",
+        "z": "4fcb0f881cdb39b2",
+        "name": "",
+        "group": "0c4e021021c2557d",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 390,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "469b07a3b653c629",
+        "type": "ui_chart",
+        "z": "4fcb0f881cdb39b2",
+        "name": "",
+        "group": "0c4e021021c2557d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "10",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 390,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "843732d3b4b85f8b",
+        "type": "ui_group",
+        "name": "Texto - Group 1",
+        "tab": "bd0db9df8c604880",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0c4e021021c2557d",
+        "type": "ui_group",
+        "name": "Graph - Group 2",
+        "tab": "bd0db9df8c604880",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bd0db9df8c604880",
+        "type": "ui_tab",
+        "name": "Flow 3 - Tab",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    }
+]
